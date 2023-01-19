@@ -33,6 +33,39 @@ Uma aplicação CRUD de gerenciamento de estoque web desenvolvida no padrão MVC
 ## Banco de dados
 ![banco](https://user-images.githubusercontent.com/25832382/213355053-a3bb2235-9f68-4b16-be2a-b1876275eec8.PNG)
 
+## Instalação
+
+Importar o projeto na IDE como um projeto Maven.
+
+## Configurações do banco de dados
+Criar um banco de dados MySQL com o nome sistema_estoque, as tabelas serão criadas automaticamente pelo Hibernate por meio das anotações nas entidades utilizando o mapemanro objeto-relacional. As configurações do banco ficam localizadas em src/main/resources/application.properties:
+
+```
+# DataSource
+spring.datasource.url=jdbc:mysql://localhost:3306/sistema_estoque?useTimezone=true&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.testWhileIdle=true
+spring.datasource.validationQuery=SELECT 1
+
+
+# JPA
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.show_sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.ImprovedNamingStrategy
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+
+# Thymeleaf
+spring.thymeleaf.mode=HTML
+spring.thymeleaf.cache=false
+
+```
+ 
+
+## Execução
+Execute o projeto através do IDE, acessar via url: http://localhost:8080
+
 
 
 

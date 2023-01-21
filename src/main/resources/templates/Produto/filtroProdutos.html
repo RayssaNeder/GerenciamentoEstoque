@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+    <title>Encontrar Produtos</title>
+    <meta name="author" content="Rayssa Neder">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/006642858d.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+<body>
+<div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+
+    <div class="container" style="margin-top: 20px;">
+
+    <h4>CATEGORIAS</h4>
+    <hr>
+        <div class="row">
+            <div class="card" style="width: 288px">
+                <a th:href="@{/produtos-informatica}">
+                <img class="card-img-top" src="img/informatica.jpg"/>
+                </a>
+            <div class="card-body">
+                <h5 class="card-title">INFORMATICA</h5>
+                <p class="card-text">Lista de todos os eletrodomésticos no sistema.</p>
+                <a th:href="@{/produtos-informatica}" class="btn btn-outline-primary">Clique Aqui</a>
+            </div>
+        </div>
+       
+        <div class="card mx-lg-3" style="width: 288px">
+            <a th:href="@{/produtos-eletrodomesticos}">
+            <img class="card-img-top" src="img/eletrodomesticos.jpg"/>
+            </a>
+        <div class="card-body">
+            <h5 class="card-title">ELETRODOMÉSTICOS</h5>
+            <p class="card-text">Lista de todos os eletrodomésticos no sistema.</p>
+            <a th:href="@{/produtos-eletrodomesticos}" class="btn btn-outline-primary">Clique Aqui</a>
+            </div>
+        </div>
+        
+         <div class="card mx-lg-3" style="width: 288px">
+            <a th:href="@{/produtos-brinquedos}">
+            <img class="card-img-top" src="img/brinquedos.jpg"/>
+            </a>
+        <div class="card-body">
+            <h5 class="card-title">BRINQUEDOS</h5>
+            <p class="card-text">Lista de todos os brinquedos no sistema.</p>
+            <a th:href="@{/produtos-brinquedos}" class="btn btn-outline-primary">Clique Aqui</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
